@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Code-Quiz</title>
+</head>
+<body>
+
+   <!-- Highscores & Timer -->
+     <p id = "highscores" class = "highscores hide">Highscores</p>
+     <ul id = "highscores-list hide"></ul>
+     <p id = "countdown" class = "hide countdown"></p>
+
+        <!-- Main Container -->
+    <div class="container" id="container">
+        <div id="question-container" class="hide">
+            
+          <!-- Question and Answer Buttons -->
+          <div id="question">Question</div>
+            
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div> 
+          
+          </div>
+          <!-- Answer Message -->
+                  <p id = "answer-message" class = "hide"></p>
+        
+          <!-- Controls -->
+        <div class="controls">
+          <button id="start-btn" class="start-btn btn">Start</button>
+          <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
+          <!-- End Controls -->
+      </div>
+    <!-- End Question-Container -->
+     
+     <!-- GameOver & User Input Section -->
+     <div class = "hide" id="form"> 
+         <p> Thank you for playing!</p>
+         <p>Your score is <span id="score"></span> </p>
+         <p>Please enter your initials</p> 
+         <input id="input" type="text" maxlength="2"></input>
+         <input id="submit-btn" type="submit">
+     </div>
+    
+    </div>       
+    <!-- End Container -->
+
+    <!-- Javascript Link -->
+<script src="script.js"></script>
+    
+</body>
+</html>
+
