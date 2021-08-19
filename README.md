@@ -17,3 +17,7 @@ The application provides an instruction screen when loaded. Follow the applicati
 
 This code was written by myself with help of the course insturctor, teacher's assistant, and tutor.
 
+
+## notes
+
+The attempted display of highscores via local storage functionality failed. The reference to html element 'message' (line 148) fails to display for unknown reasons. Local storage does register in scoreTally. If functional, list-items would then have been appended to a unordered-list of highscores. 

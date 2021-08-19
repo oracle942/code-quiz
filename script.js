@@ -21,6 +21,8 @@ var scoreTally = 0
 var seconds
 // End Global Variable List
 
+welcomeMessage.classList.remove('hide')
+
 // COUNTDOWN
 function countdown(){
   if(seconds < 1){
@@ -48,6 +50,7 @@ function startGame() {
   seconds = 75 
   welcomeMessage.classList.add('hide')
 
+
 // Hides start button. Shows highscores, timer, and first question
   startButton.classList.add('hide')
   countdownEl.classList.remove('hide')
@@ -59,6 +62,7 @@ function startGame() {
   currentQuestionIndex = 0
   
   setNextQuestion()
+  
 }
 
 
@@ -146,9 +150,11 @@ function resetState() {
 
 //Attempt to display welcome message on submit button
 submitBtn.addEventListener("click", function() {
+  welcomeMessage.classList.remove('hide')
   localStorage.setItem("initials", input)
-  welcomeMessage.setAttribute('display', 'flex')
   form.classList.add('hide')
+  countdownEl.classList.add('hide')
+  highscores.classList.add('hide')
 })
 
 const questions = [
