@@ -1,7 +1,7 @@
 const container = document.getElementById('container')
 const welcomeMessage = document.querySelector('.x')
 const form = document.getElementById('form')
-const score = document.getElementById('score')
+const finalScore = document.getElementById('final-score')
 const startButton = document.getElementById('start-btn')
 const answerMessage = document.getElementById('answer-message')
 const nextButton = document.getElementById('next-btn')
@@ -15,6 +15,8 @@ const submitBtn = document.getElementById('submit-btn')
 const highscoresList = document.getElementById('highscores-list')
 let shuffledQuestions, currentQuestionIndex
 let refreshIntervalID 
+var score = localStorage.getItem('storedScore')
+var initials = localStorage.getItem('initials')
 var scoreTally = 0
 var seconds
 // End Global Variable List
@@ -27,12 +29,11 @@ function countdown(){
     container.classList.add('hide')
     clearInterval(refreshIntervalID)
     score.textContent = scoreTally
-    // countdownEl.classList.add('hide')
+    countdownEl.classList.add('hide')
     // break;
     }; 
   countdownEl.innerHTML = "Time: " + seconds + " seconds"
   seconds--  
-    console.log(seconds)
 }
 // BUTTON EVENT HANDLERS. Start Button and Next Button Event Listeners
 startButton.addEventListener('click', startGame)
@@ -105,8 +106,6 @@ function resetState() {
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
-  // console.log(nextButton)
-  // console.log(answerMessage)
 }
 
 
@@ -117,49 +116,41 @@ function resetState() {
   const selectedButton = event.target
   const correct = selectedButton.dataset.correct
   answerMessage.classList.remove('hide')
-  console.log(correct)
   if (correct === undefined){
     seconds = seconds -15
-    console.log(seconds)
+    answerMessage.innerText = "Incorrect!"
+    // seconds = seconds -15
 
   }
+  if(correct){ 
+    // Passes "Correct!" message to answerMessage element
+    answerMessage.innerText = "Correct!"
+  // Increases score tally by one  
+    scoreTally++ 
+    localStorage.setItem('storedScore', scoreTally)
+  }
 
-  // Creates array from buttons and for each button runs onAnswer.
-  // onAnswer performs many actions uppon anwser selection.
-  Array.from(answerButtonsElement.children).forEach(button => {
-  //Passes each button and the boolean value of correct to onAnswer
-    onAnswer(correct)
-  })
   //If there are questions left, show the 'next button'
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
     
-    //Otherwise show a Restart button
+    //GAME OVER. 
   } else {
     clearInterval(refreshIntervalID)
-    startButton.innerText = 'Restart'
+    finalScore.innerHTML = scoreTally
+    form.classList.remove('hide')
+    container.classList.add('hide')
     startButton.classList.remove('hide')
   }
 }
 
+submitBtn.addEventListener("click", function submit () {
+  localStorage.setItem("initials", input)
+  console.log(initials)
 
-  //SELECT STATUS CLASS
- function onAnswer(correct) {
-  // Display 'Correct!' message, increase scoreTally and save in local storage
-  if (!correct) {
-  // Passes "Correct!" message to answerMessage element
-    answerMessage.innerText = "Correct!"
-  // Increases score tally by one  
-    scoreTally++ 
-} 
-    else {
+})
 
-      answerMessage.innerText = "Incorrect!"
-      // seconds = seconds -15
-      // console.log(seconds)
 
-}
- }
 
 const questions = [
   {

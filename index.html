@@ -11,6 +11,7 @@
 
    <!-- Highscores & Timer -->
      <p id = "highscores" class = "highscores hide">Highscores</p>
+     <ul id = "storedScore"></ul>
      <ul id = "highscores-list hide"></ul>
      <p id = "countdown" class = "hide countdown"></p>
 
@@ -29,10 +30,7 @@
           <div id="question">Question</div>
             
             <div id="answer-buttons" class="btn-grid">
-                <!-- <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button> -->
+            
             </div> 
           
           </div>
@@ -51,7 +49,7 @@
      <!-- GameOver & User Input Section -->
      <div class = "hide" id="form"> 
          <p> Thank you for playing!</p>
-         <p>Your score is <span id="score"></span> </p>
+         <p>Your score is <span id="final-score"></span> </p>
          <p>Please enter your initials</p> 
          <input id="input" type="text" maxlength="2"></input>
          <input id="submit-btn" type="submit">
