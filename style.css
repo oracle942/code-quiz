@@ -4,6 +4,7 @@
 }
 
 .welcome-message{
+  z-index: 10;
   display: flex;
   justify-content: center;
   font-size: larger;

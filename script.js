@@ -144,13 +144,12 @@ function resetState() {
   }
 }
 
+//Attempt to display welcome message on submit button
 submitBtn.addEventListener("click", function() {
   localStorage.setItem("initials", input)
-  welcomeMessage.classList.remove('hide')
-
+  welcomeMessage.setAttribute('display', 'flex')
+  form.classList.add('hide')
 })
-
-
 
 const questions = [
   {
