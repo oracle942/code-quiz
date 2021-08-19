@@ -151,6 +151,7 @@ function resetState() {
 //Attempt to display welcome message on submit button
 submitBtn.addEventListener("click", function() {
   welcomeMessage.classList.remove('hide')
+  startButton.classList.remove('hide')
   localStorage.setItem("initials", input)
   form.classList.add('hide')
   countdownEl.classList.add('hide')
