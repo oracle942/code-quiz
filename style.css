@@ -1,0 +1,157 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+.welcome-message{
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+}
+
+p.countdown {
+  font-size: 30px;
+  text-shadow: 2px 2px #ff00c8;
+  color:rgb(83, 243, 9);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+p.highscores {
+  color: rgb(255, 255, 255);
+  /* background: rgb(51, 51, 51); */
+  text-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(255, 45, 149) 0px 0px 20px, rgb(255, 45, 149) 0px 0px 30px, rgb(255, 45, 149) 0px 0px 40px, rgb(255, 45, 149) 0px 0px 50px, rgb(255, 45, 149) 0px 0px 75px;
+  --darkreader-inline-color:#e8e6e3;
+  --darkreader-inline-bgimage: initial;
+  --darkreader-inline-bgcolor:#262a2b;
+  color:rgb(253, 14, 181);
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 20px;
+  z-index:5;
+  
+}
+body {
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, rgb(195, 240, 200), rgb(80, 155, 245));
+}
+
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px 2px;
+}
+
+#form{
+  font-size: x-large;  
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px 2px;
+}
+
+#input{
+  box-shadow: 10px;  
+  font-size: x-large;
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+ 
+}
+#submit-btn:hover{
+  background-color:rgb(11, 144, 11);
+
+}
+input[type = submit] {
+  box-shadow: 0px 0px 2px 2px rgb(15, 170, 15);
+  font-size:x-large;  
+  background-color: rgb(15, 170, 15);
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 5px 5px;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  color:darkcyan;
+  border: 1px solid hsl(rgb(66, 180, 180);, 100%, 30%);
+  background-color: darkcyan;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+#answer-message{
+  opacity: .7;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  font-style: italic;
+ 
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* Background Style */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DFDFDF;
+}
+
+
