@@ -1,5 +1,5 @@
 const container = document.getElementById('container')
-const welcomeMessage = document.querySelector('.x')
+const welcomeMessage = document.querySelector('.welcome')
 const form = document.getElementById('form')
 const finalScore = document.getElementById('final-score')
 const startButton = document.getElementById('start-btn')
@@ -144,9 +144,9 @@ function resetState() {
   }
 }
 
-submitBtn.addEventListener("click", function submit () {
+submitBtn.addEventListener("click", function() {
   localStorage.setItem("initials", input)
-  console.log(initials)
+  welcomeMessage.classList.remove('hide')
 
 })
 
