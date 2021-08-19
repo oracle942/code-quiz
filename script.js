@@ -45,7 +45,7 @@ nextButton.addEventListener('click', () => {
 
 // START GAME
 function startGame() {
-  seconds = 100
+  seconds = 75 
   welcomeMessage.classList.add('hide')
 
 // Hides start button. Shows highscores, timer, and first question
